@@ -44,6 +44,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   },
   //TODO: add correct TS types to auth callbacks
   //TODO: add more checks
+  //TODO: check if FA session for site already exists
   // Customize JWT and session callbacks
   callbacks: {
     async jwt({ token, user, account }: { token: any, user?: any, account?: any }) {

@@ -1,8 +1,20 @@
+"use client"
 import { auth } from "@/auth";
+import { signIn, signOut, useSession } from "next-auth/react"
+
 import React from "react";
 
-const HomeNavbar = async () => {
-  const session = await auth();
+//TODO: session TS
+
+const HomeNavbar = () => {
+  // const session = await auth();
+  // if (session.error?.name === "RefreshAccessTokenError") {
+  //   signOut();
+    
+  // }
+
+  const { data: session, status } = useSession();
+
 
   return (
     <div className="navbar bg-primary text-primary-content">
@@ -101,12 +113,12 @@ const HomeNavbar = async () => {
                 <a>Settings</a>
               </li>
               <li>
-                <a>Logout</a>
+                <a onClick={() => signOut()}>Logout</a>
               </li>
             </ul>
           </div>
         ) : (
-            <button className="btn btn-accent">Login</button>
+            <button className="btn btn-accent" onClick={() => signIn("fusionauth")}>Login</button>
         )}
       </div>
     </div>
