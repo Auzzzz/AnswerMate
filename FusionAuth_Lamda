@@ -1,0 +1,29 @@
+
+
+// Create a new Lambda in 'Customizations' -> 'Lambdas'
+// New Lambda -> Type: JWT populate
+// Appplications -> JWT -> ID Token Populate lambda -> Select the new lambda
+
+
+function populate(jwt, user, registration) {
+ 
+  jwt.user = {
+    userId: user.id,
+    regId: registration.id,
+    email: user.email,
+    username: registration.username,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    roles: registration.roles,
+    tokens: registration.tokens,
+    usernameStatus: registration.usernameStatus,
+    verified: registration.verified,
+    registrationData: registration.data,
+    userData: user.data,
+		lastLogin: user.lastLoginInstant,
+    imgUrl: user.imageUrl
+  };
+  
+//   console.info('Hello World!');
+}
+s
