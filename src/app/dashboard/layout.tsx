@@ -1,16 +1,15 @@
 import "@/app/globals.css";
 
 import { Inter } from "next/font/google";
-import Provider from "@/components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AnswerM8 | Live Q&A",
-  description: "Use AnswerM8 at your next event to engage with your audience.",
-};
+    title: "AnswerM8 | Dashboard",
+    description: "Use AnswerM8 at your next event to engage with your audience.",
+  };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -18,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Provider>{children}</Provider>
+       {children}
       </body>
     </html>
   );
