@@ -3,28 +3,15 @@ import HomeNavbar from "@/components/home/Navbar";
 export default function Dashboard() {
   return (
     <main className="flex min-h-screen flex-col ">
-      <HomeNavbar />
-
       <div className="flex flex-col items-center m-4">
         <ul className="menu bg-base-200 lg:menu-horizontal rounded-box">
           <li>
             <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-              Inbox
-              <span className="badge badge-xs">99+</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+</svg>
+
+              New Presentation
             </a>
           </li>
           <li>

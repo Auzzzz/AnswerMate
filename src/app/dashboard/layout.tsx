@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import HomeNavbar from "@/components/home/Navbar";
 
 import { Inter } from "next/font/google";
 
@@ -17,6 +18,8 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <HomeNavbar />
+      
        {children}
       </body>
     </html>
