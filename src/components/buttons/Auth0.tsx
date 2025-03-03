@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 export default function Auth0Button() {
   return (
     <button
-      className="border border-slate-300 rounded px-5 py-4 flex items-center"
+      className="border border-slate-300 rounded-sm px-5 py-4 flex items-center"
       onClick={() => signIn("auth0")}
     >
       <svg
